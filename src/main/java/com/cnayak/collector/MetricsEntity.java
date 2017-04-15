@@ -9,8 +9,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class MetricsEntity {
 	
 	@Id
-	public String time;
+	public String id;
 	
+	public String time;
 	public String name;
 	public ArrayList<String> metrics;
 	

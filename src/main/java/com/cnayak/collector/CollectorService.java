@@ -42,15 +42,15 @@ public class CollectorService {
 		startupMessage.put("name",name);
 		startupMessage.put("time", getTime());
 		
-		tribeEndpointMessage.put("tribes","GET");
-		tribeEndpointMessage.put("tribes/{name}","GET");
-		tribeEndpointMessage.put("/tribes","POST");
-		tribeEndpointMessage.put("tribes/aoe","PUT");
-		tribeEndpointMessage.put("deleteAll","GET");
+		tribeEndpointMessage.put("01 - /tribes","GET");
+		tribeEndpointMessage.put("02 - /tribes/{name}","GET");
+		tribeEndpointMessage.put("03 - /tribes","POST");
+		tribeEndpointMessage.put("04 - /tribes/{name}","PUT");
+		tribeEndpointMessage.put("05 - /deleteAll","GET");
 		
-		metricsEndpointMessage.put("metrics", "GET");
-		metricsEndpointMessage.put("metrics/{cpu/memory}", "GET");
-		metricsEndpointMessage.put("/metrics", "POST");
+		metricsEndpointMessage.put("01 - /metrics", "GET");
+		metricsEndpointMessage.put("02 - /metrics/{cpu/memory}", "GET");
+		metricsEndpointMessage.put("03 - /metrics", "POST");
 
 		l.put("startup", startupMessage);
 		l.put("tribe-endpoint", tribeEndpointMessage);

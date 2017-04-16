@@ -22,12 +22,6 @@ public class Controller {
 	AoeService aoeService;
 	
 	
-	// Normal Routing methods with string
-    @RequestMapping("/")
-    String home() {
-        return "Hello World! - Keep Coming Back";
-    }
-
 	@RequestMapping(method=RequestMethod.GET, value="/name")
 	String name() {
 		return "Chandan";

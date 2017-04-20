@@ -13,6 +13,7 @@ public class Application {
 //        SpringApplication.run(Example.class, args);
         SpringApplication app = new SpringApplication(Application.class);
         app.run(args);
+        
     }
 
 }

@@ -41,13 +41,16 @@ public class CollectorService {
 		startupMessage.put("greetings", "WELCOME!");
 		startupMessage.put("name",name);
 		startupMessage.put("time", getTime());
+		startupMessage.put("stuff", "spring-boot, mongodb, tiny-python-agent");
 		
+		tribeEndpointMessage.put("00 - ","public endpoints (not protected)");
 		tribeEndpointMessage.put("01 - /tribes","GET");
 		tribeEndpointMessage.put("02 - /tribes/{name}","GET");
 		tribeEndpointMessage.put("03 - /tribes","POST");
 		tribeEndpointMessage.put("04 - /tribes/{name}","PUT");
 		tribeEndpointMessage.put("05 - /deleteAll","GET");
 		
+		metricsEndpointMessage.put("00 - ", "private endpoints (protected)");
 		metricsEndpointMessage.put("01 - /metrics", "GET");
 		metricsEndpointMessage.put("02 - /metrics/{cpu/memory}", "GET");
 		metricsEndpointMessage.put("03 - /metrics", "POST");

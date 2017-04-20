@@ -36,5 +36,10 @@ public class CollectorController {
 	public List<MetricsEntity> getTribe(@PathVariable String name){
 		return collectorService.findByname(name);
 	}
+	
+	@RequestMapping("/admin")
+	public String getAdminAccess(){
+		return "WelcomeAdmin";
+	}
 
 }

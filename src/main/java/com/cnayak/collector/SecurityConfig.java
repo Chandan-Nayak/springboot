@@ -20,7 +20,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.antMatchers("/admin").hasRole(ADMIN)
 		.and()
 			.formLogin();
+		
+		httpSecurity.csrf()
+			.ignoringAntMatchers("/tribes")
+			.ignoringAntMatchers("/metrics");
 	}
+	
 	
 	@Autowired
 	public void whatever(AuthenticationManagerBuilder auth) throws Exception{
